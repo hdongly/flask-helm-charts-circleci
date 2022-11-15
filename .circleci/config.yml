@@ -33,7 +33,7 @@ jobs:
       - run:
           name: "cluster configs"
           command: |
-            eksctl utils write-kubeconfig --cluster=$AWS_EKS_CLUSTER_NAME --region=us-east-2
+            eksctl utils write-kubeconfig --cluster=$AWS_EKS_CLUSTER_NAME --region=$AWS_CLUSTER_REGION
       - run:
           name: "helm install"
           command: bash ./scripts/deploy-flask.sh 1.0.0 $AWS_ECR_ACCOUNT_URL $AWS_ECR_HELM_REPO_NAME
