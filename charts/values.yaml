@@ -1,6 +1,5 @@
-replicaCount: 1
 image:
-  repository: <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<AWS_ECR_REPO_NAME>
+  repository: "flask-helm-chart7"
   pullPolicy: IfNotPresent
   tag: "latest"
 labels:
